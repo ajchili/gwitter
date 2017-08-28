@@ -31,7 +31,7 @@ class CNN(object):
                         self.embedded_chars_expanded,
                         W,
                         strides=[1, 1, 1, 1],
-                        padding="VAILD",
+                        padding="VALID",
                         name="conv")
                 h = tf.nn.relu(tf.nn.bias_add(conv, b), name="relu")
                 pooled = tf.nn.max_pool(
@@ -60,7 +60,7 @@ class CNN(object):
 
         with tf.name_scope("loss"):
             losses = tf.nn.softmax_cross_entropy_with_logits(
-                    logits=self.scores, label=self.input_y)
+                    logits=self.scores, labels=self.input_y)
             self.loss =tf.reduce_mean(losses)
 
         with tf.name_scope("accuracy"):
