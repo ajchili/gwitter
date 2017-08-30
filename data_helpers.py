@@ -1,4 +1,5 @@
 import numpy as np
+import codecs
 import re
 import itertools
 from collections import Counter
@@ -27,9 +28,9 @@ def clean_str(string):
     return string.strip().lower()
 
 def load_data_and_labels(positive_data_file, negative_data_file):
-    positive_examples = list(open(positive_data_file, "r").readlines())
+    positive_examples = list(codecs.open(positive_data_file, encoding='utf-16').readlines())
     positive_examples = [s.strip() for s in positive_examples]
-    negative_examples = list(open(negative_data_file, "r").readlines())
+    negative_examples = list(codecs.open(negative_data_file, encoding='utf-16').readlines())
     negative_examples = [s.strip() for s in negative_examples]
 
     x_text = positive_examples + negative_examples

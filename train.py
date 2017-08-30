@@ -12,8 +12,8 @@ from tensorflow.contrib import learn
 
 # Misc Parame# Data loading params
 tf.flags.DEFINE_float("dev_sample_percentage", .1, "Percentage of the training data to use for validation")
-tf.flags.DEFINE_string("positive_data_file", "positive.txt", "Text file with male Twitter handles")
-tf.flags.DEFINE_string("negative_data_file", "negative.txt", "Text file with female Twitter handles")
+tf.flags.DEFINE_string("positive_data_file", "data/male_tweets.txt", "Text file with male Twitter handles")
+tf.flags.DEFINE_string("negative_data_file", "data/female_tweets.txt", "Text file with female Twitter handles")
 
 # Model Hyperparameters
 tf.flags.DEFINE_integer("embedding_dim", 128, "Dimensionality of character embedding (default: 128)")
