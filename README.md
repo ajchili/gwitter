@@ -8,3 +8,12 @@ A [Tensorflow](https://www.tensorflow.org/) application that utilizes [python-tw
    * ```pip install tensorflow```
 3. Install [python-twitter](https://github.com/bear/python-twitter)
    * ```pip install python-twitter```
+4. Get Twitter API keys
+   * Go [here](https://apps.twitter.com/app/new)
+   * Create an app
+   * Get your:
+      * consumer_key
+      * consumer_secret
+      * access_token_key
+      * access_token_secret
+   * Provide these values to [gather.py](https://github.com/ajchili/gwitter/blob/master/data/gather.py)
