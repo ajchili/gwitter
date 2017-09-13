@@ -7,7 +7,7 @@ api = twitter.Api(consumer_key='',
                   access_token_secret='')
 
 name = ''
-f = open('eval_tweets.txt', 'w+', encoding='utf-16')
+f = open('data/eval_tweets.txt', 'w+', encoding='utf-16')
 
 statuses = api.GetUserTimeline(screen_name=name,
                                count=50,

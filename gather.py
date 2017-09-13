@@ -7,8 +7,8 @@ api = twitter.Api(consumer_key='',
                   access_token_secret='')
 
 gender = '' # male or female
-names = tuple(open('{}s.txt'.format(gender), 'r'))
-f = open('{}_tweets.txt'.format(gender), 'w+', encoding='utf-16')
+names = tuple(open('data/{}s.txt'.format(gender), 'r'))
+f = open('data/{}_tweets.txt'.format(gender), 'w+', encoding='utf-16')
 
 for name in names:
     name = name.replace('\n', '')
